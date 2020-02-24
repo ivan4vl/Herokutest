@@ -23,14 +23,15 @@ app.get("/form",function(req,res)
 {
   res.render("form.hbs",{junk:"My form page"});
 });
-
+//hello
 app.post("/results",function(req,res)
 {
   res.render("results.hbs",{junk:"Name:" + req.body.name+ "  " +"  Email:"+req.body.email +"   Comments: "+ req.body.comments });
 });
 
+const port = process.env.PORT || 80
 
 app.get("/Chocolate",function(req,res) {
    
 });
-app.listen(3002,()=>{console.log("Server running on http://localhost:3002/index")});
+app.listen(port,()=>{console.log("Server running on http://localhost:3002/index")});
